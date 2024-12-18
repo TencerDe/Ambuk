@@ -1,0 +1,17 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+    <header>
+        <h1>Welcome to Ambulance Service</h1>
+        <nav>
+            <a href="{% url 'login' %}">Login</a> | <a href="{% url 'signup' %}">Sign Up</a>
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <h2>Need an ambulance?</h2>
+            <p>Get help for you or your loved ones.</p>
+            <a href="{% url 'signup' %}" class="btn">Sign Up Now</a>
+        </section>
+    </main>
+{% endblock %}

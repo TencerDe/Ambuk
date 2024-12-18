@@ -1,0 +1,16 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+  <h1>Welcome, {{ name }}!</h1>
+  <p>Your upcoming tasks:</p>
+  <ul>
+    {% for task in tasks %}
+      <li>{{ task }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+<h1>Driver Profile</h1>
+<p>Name: {{ driver.user.first_name }} {{ driver.user.last_name }}</p>
+<p>Phone Number: {{ driver.phone_number }}</p>
+<p>Vehicle Number: {{ driver.vehicle_number }}</p>
+<p>Availability: {% if driver.is_available %} Available {% else %} Not Available {% endif %}</p>

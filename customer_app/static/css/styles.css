@@ -1,0 +1,360 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body & Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7fb;
+    color: #555;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #2C3E50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #ecf0f1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #16a085;
+    color: #fff;
+}
+
+/* Main Content */
+main {
+    padding: 40px;
+    background-color: #fff;
+    min-height: 60vh;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card Layout */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    color: #2C3E50;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+.card button {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card button:hover {
+    background-color: #16a085;
+    transform: translateY(-2px);
+}
+
+.card button:active {
+    transform: translateY(0);
+}
+
+/* Profile Section */
+.profile-container, .booking-status, .book-ambulance-container {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #34495e;
+    font-weight: 500;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #2980b9;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #7f8c8d;
+}
+
+/* Button Styling */
+button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #16a085;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Form Styling */
+input[type="text"], input[type="password"], textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, textarea:focus {
+    border-color: #2980b9;
+    outline: none;
+}
+
+textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+/* Booking Status */
+.list-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list-group-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: 48%;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.list-group-item:hover {
+    transform: translateY(-5px);
+}
+
+.list-group-item h5 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #2C3E50;
+}
+
+.list-group-item p {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+.badge {
+    font-size: 0.9rem;
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: #fff;
+}
+
+.badge.bg-warning {
+    background-color: #f39c12;
+}
+
+.badge.bg-info {
+    background-color: #3498db;
+}
+
+.badge.bg-primary {
+    background-color: #2980b9;
+}
+
+.badge.bg-success {
+    background-color: #27ae60;
+}
+
+.badge.bg-secondary {
+    background-color: #7f8c8d;
+}
+
+/* Modal Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close {
+    font-size: 30px;
+    color: #aaa;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close:hover {
+    color: #000;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2C3E50;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 2px solid #ecf0f1;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .list-group-item {
+        width: 100%;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    button {
+        width: 100%;
+        font-size: 1.1rem;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+}

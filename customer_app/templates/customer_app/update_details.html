@@ -1,0 +1,22 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+    <div class="container">
+        <h2 class="text-center my-4">Update Your Details</h2>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="preferred_hospital" class="form-label">Preferred Hospital</label>
+                <input type="text" class="form-control" id="preferred_hospital" name="preferred_hospital" value="{{ customer.preferred_hospital }}">
+            </div>
+
+            <div class="mb-3">
+                <label for="patient_details" class="form-label">Health Details</label>
+                <textarea class="form-control" id="patient_details" name="patient_details">{{ customer.patient_details }}</textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Save Changes</button>
+        </form>
+    </div>
+{% endblock %}

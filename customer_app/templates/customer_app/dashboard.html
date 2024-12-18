@@ -1,0 +1,27 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+    <div class="container">
+        <h2 class="text-center my-4">Welcome, {{ customer.user.first_name }}!</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Basic Details</h4>
+                <ul>
+                    <li><strong>Name:</strong> {{ customer.user.first_name }} {{ customer.user.last_name }}</li>
+                    <li><strong>Email:</strong> {{ customer.user.email }}</li>
+                    <li><strong>Phone:</strong> {{ customer.phone_number }}</li>
+                    <li><strong>Preferred Hospital:</strong> {{ customer.preferred_hospital }}</li>
+                    <li><strong>Health Details:</strong> {{ customer.patient_details }}</li>
+                </ul>
+            </div>
+
+            <div class="col-md-6">
+                <h4>Actions</h4>
+                <a href="{% url 'book' %}" class="btn btn-primary">Book Ambulance</a>
+                <a href="{% url 'update_details' %}" class="btn btn-secondary">Update Details</a>
+                <a href="{% url 'booking_status' %}" class="btn btn-info">Check Booking Status</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
